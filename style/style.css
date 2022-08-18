@@ -4,6 +4,7 @@
     list-style-type: none;
     text-decoration: none;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 @font-face {
     font-family: sheroboto;
@@ -35,8 +36,29 @@ header li{
 header li a{
     font-size: 18px;
     color: #ffffff;
-    padding: 10px 10px;
+    padding: 5px 10px;
+    position: relative;
 }
+header li a::before{
+    content: "";
+    width: 0%;
+    height: 1px;
+    background-color: #ffffff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 2s;
+}
+header li a:hover::before{
+    width: 100%;
+    
+}
+
+.active{
+    width: 90px;
+    border-bottom: 1px solid #ffffff;
+}
+
 main{
     margin-left: 109px;
 }
@@ -69,6 +91,17 @@ section{
     background-position-y: 58px;
     position: relative;
     margin-bottom: 10px;
+}
+article section:hover{
+    width: 303px;
+    box-shadow: 0 0 20px #464646;
+}
+article:hover a{
+    text-decoration: underline;
+}
+article .guli:hover{
+    background-image: url(../imgs/guliColored.png);
+    cursor: pointer;
 }
 section h3{
     font-size: 18px;
@@ -105,12 +138,20 @@ section div{
     background-repeat: no-repeat;
     background-size: 100%;
 }
+.face:hover{
+    background-image: url(../imgs/faceColored.png);
+    cursor: pointer;
+}
 .insta{
     width: 50px;
     height: 50px;
     background-image: url(../imgs/insta.png);
     background-repeat: no-repeat;
     background-size: 100%;
+}
+.insta:hover{
+    background-image: url(../imgs/instaColored.png);
+    cursor: pointer;
 }
 
 footer{
@@ -169,8 +210,13 @@ footer .uflebebi{
     color: #000000;
 }
 .playlistsection li{
-    padding-top: 4px;
-    padding-bottom: 4px;
+    padding-bottom: 6px;
+}
+.playlistsection:hover{
+    
+    box-shadow: 0 0 30px #00000049;
+    background-color: #00000021;
+    border-radius: 20px;
 }
 .soundicons, .soundicons2{
     width: 260px;
@@ -205,8 +251,13 @@ footer .uflebebi{
     color: #000000;
 }
 .playlistsection2 li{
-    padding-top: 4px;
-    padding-bottom: 4px;
+    padding-bottom: 6px;
+}
+.playlistsection2:hover{
+    
+    box-shadow: 0 0 30px #00000049;
+    background-color: #00000021;
+    border-radius: 20px;
 }
 .thanksText{
     width: 343px;
